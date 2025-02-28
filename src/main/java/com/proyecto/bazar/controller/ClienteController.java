@@ -24,7 +24,7 @@ public class ClienteController {
     }
     
     @GetMapping("/cliente/{id_cliente}")
-    public Cliente getDueño(@PathVariable Long id_cliente){
+    public Cliente getCliente(@PathVariable Long id_cliente){
         return clienteServ.getClienteById(id_cliente);
     }
     
