@@ -32,18 +32,18 @@ public class Venta {
     private List<Producto> listaProductos;
     
     @ManyToOne
-    @JoinColumn(name = "idCliente", nullable = false)
-    private Cliente unCliente;
+    @JoinColumn(name = "id_cliente", nullable = false)
+    private Cliente cliente;
 
     public Venta() {
     }
 
-    public Venta(Long codigo_venta, LocalDate fecha_venta, double total, List<Producto> listaProductos, Cliente unCliente) {
+    public Venta(Long codigo_venta, LocalDate fecha_venta, double total, List<Producto> listaProductos, Cliente cliente) {
         this.codigo_venta = codigo_venta;
         this.fecha_venta = fecha_venta;
         this.total = total;
         this.listaProductos = listaProductos;
-        this.unCliente = unCliente;
+        this.cliente = cliente;
     }
     
 }

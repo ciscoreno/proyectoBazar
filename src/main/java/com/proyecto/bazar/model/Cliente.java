@@ -18,7 +18,8 @@ public class Cliente {
     private String apellido;
     private String dni;
 
-    public Cliente() { }
+    public Cliente() {
+    }
 
     public Cliente(Long id_cliente, String nombre, String apellido, String dni) {
         this.id_cliente = id_cliente;
