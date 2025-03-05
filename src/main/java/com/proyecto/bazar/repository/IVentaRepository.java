@@ -13,6 +13,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IVentaRepository extends JpaRepository<Venta, Long> {
 
-    public List<Venta> findByFechaVenta(LocalDate fecha);
+    public List<Venta> findByFechaVenta(LocalDate fecha_venta);
     
 }

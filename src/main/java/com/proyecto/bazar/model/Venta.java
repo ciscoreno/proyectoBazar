@@ -20,14 +20,14 @@ public class Venta {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long codigo_venta;
-    private LocalDate fecha_venta;
+    private LocalDate fechaVenta;
     private double total;
     
     @ManyToMany
     @JoinTable(
             name = "venta_producto",
-            joinColumns = @JoinColumn(name = "codigoVenta"),
-            inverseJoinColumns = @JoinColumn(name = "codigoProducto")
+            joinColumns = @JoinColumn(name = "codigo_venta"),
+            inverseJoinColumns = @JoinColumn(name = "codigo_producto")
     )
     private List<Producto> listaProductos;
     
@@ -40,7 +40,7 @@ public class Venta {
 
     public Venta(Long codigo_venta, LocalDate fecha_venta, double total, List<Producto> listaProductos, Cliente cliente) {
         this.codigo_venta = codigo_venta;
-        this.fecha_venta = fecha_venta;
+        this.fechaVenta = fechaVenta;
         this.total = total;
         this.listaProductos = listaProductos;
         this.cliente = cliente;
